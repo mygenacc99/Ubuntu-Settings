@@ -1,0 +1,50 @@
+--things to do after install  ubuntu.
+
++ Install Longman
+	- purge gstreamer1.0-libav
+	- Reinstall libavcodec-extra
++ Install Chrome.
++ Install jdk 8
++ Install sublime .(find link and change xxxx build)
++ Install Anki.
+	 Plugin button replay sound.
++ Install mysql: $ sudo apt-get install mysql-server
+	workdbench: $ apt-get install mysql-workbench
+
++ Install bookworm to reading books.
++ Mac theme for ubuntu:
+	https://www.gnome-look.org/p/1241688/
+		Choose: McOS-CTLina-Dark
+	After install plank, install plank preferences extension
+		https://www.gnome-look.org/p/1201564/
+		Dark theme for plank
+
++ Extensions for VsCode:
+- Theme: dracula
+- Better Align
+- Color Picker
+- colorize
+- live server
+- material icon theme
+- Path Intellisense
+- VIM
+	
+
+extension ubuntu:
+1. AlternateTab
+2. Dash to Dock
+3. OpenWeather
+
+
+
+--- Plugins for VIM
+0. Install NeoVim pre-release version.
+1. CocInstall
+coc-snippets
+maybe need: ccls (use snap)
+		clangd
+
+
+
+
+
