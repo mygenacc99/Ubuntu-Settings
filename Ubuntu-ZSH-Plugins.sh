@@ -1,4 +1,5 @@
 cd ~/.oh-my-zsh/custom/plugins;
+
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git;
 echo "source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc;
 
@@ -7,7 +8,7 @@ echo "source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git powerlevel10k
 echo 'source ~/.oh-my-zsh/custom/plugins/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc;
-echo '~/.my-commands.sh' >> ~/.zshrc;
+echo 'source ~/.my-commands.sh' >> ~/.zshrc;
 echo 'bindkey '^H' backward-kill-word' >> ~/.zshrc;
 
 
