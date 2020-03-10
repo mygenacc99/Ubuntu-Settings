@@ -1,3 +1,14 @@
+echo "plugins=(
+	git
+	colored-man-pages
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	command-not-found
+	encode64
+	extract
+)" >> ~/.zshrc;
+
+
 cd ~/.oh-my-zsh/custom/plugins;
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git;
@@ -12,14 +23,10 @@ echo 'source ~/.my-commands.sh' >> ~/.zshrc;
 echo 'bindkey '^H' backward-kill-word' >> ~/.zshrc;
 
 
-echo "plugins=(
-	git
-	colored-man-pages
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	command-not-found
-	encode64
-	extract
-)" >> ~/.zshrc;
 
 ~/.fzf/install --all;
+
+
+
+sed 's/plugins=(git)//' ~/.zshrc >  ~/.zshrctemp
+mv ~/.zshrctemp ~/.zshrc
