@@ -10,6 +10,8 @@ cp ../Fonts/MacFontsCollection/* ~/.fonts
 # Ctrl-S Ctrl-Q not stop nvim
 echo "stty -ixon" >> ~/.bashrc;
 
+# Install sofwares
+sudo apt-get install -y ctags curl gimp clang-format git gnome-tweaks kolourpaint neovim neovim-qt plank vlc;
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -17,8 +19,8 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf;
 ~/.fzf/install --all;
 
-# Install sofwares
-sudo apt-get install -y ctags curl gimp clang-format git gnome-tweaks kolourpaint neovim neovim-qt plank vlc;
+mkdir -p ~/.icons
+git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git ~/.icons
 
 sudo apt-get install -y zsh;
 sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh);
