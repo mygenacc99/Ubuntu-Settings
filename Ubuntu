@@ -48,7 +48,7 @@ maybe need: ccls (use snap)
 
 --- Install WireGuard
 
-	sudo apt install wireguard openresolv
+sudo apt install wireguard openresolv
 
 cp the config file to /etc/wireguard/wg0.conf
 
@@ -60,6 +60,13 @@ sudo systemctl stop wg-quick@wg0
 
 
 
+###################### KDE ################################
+Set shortkey for flameshot
+
+Clipboard: Ignore selection
+Turn on disk auto-mount feature
+Install Widget: Active window control
+    /home/colab/.local/share/aurorae/themes/We10XOS/
 
 
 

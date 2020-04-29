@@ -23,10 +23,22 @@ echo 'source ~/.my-commands.sh' >> ~/.zshrc;
 echo 'bindkey '^H' backward-kill-word' >> ~/.zshrc;
 
 
-
 ~/.fzf/install --all;
-
-
 
 sed 's/plugins=(git)//' ~/.zshrc >  ~/.zshrctemp
 mv ~/.zshrctemp ~/.zshrc
+
+if [[ $DESKTOP_SESSION = "plasma" ]]
+then
+    echo "
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT4_IM_MODULE=ibus
+export CLUTTER_IM_MODULE=ibus
+    " >> ~/.zshrc;
+    echo "added MODULE=ibus to zshrc"
+    echo "FOR PLASMA"
+else
+    echo "FOR GNOME" 
+fi
