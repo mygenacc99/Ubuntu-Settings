@@ -1,6 +1,8 @@
 if [[ $DESKTOP_SESSION = "plasma" ]]
 then
     echo "FOR PLASMA"
+    # Solve calculus on Krunner
+    sudo apt-get install -y gnuplot;
     
     # Screenshot for KDE
     sudo apt-get purge -y kde-spectacle;
