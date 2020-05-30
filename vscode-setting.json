@@ -1,15 +1,25 @@
 {
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Monokai Pro",
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "'JetBrains Mono'",
+    "editor.fontLigatures": true,
     "terminal.integrated.fontFamily": "MesloLGS NF",
-    "editor.fontSize": 16,
+    "editor.fontSize": 18,
 
+    // "terminal.integrated.allowChords": false,
+    "terminal.integrated.commandsToSkipShell": [
+        // Ensure the toggle sidebar visibility keybinding skips the shell
+        "workbench.action.toggleSidebarVisibility",
+        // Send quick open's keybinding to the shell
+        "-workbench.action.quickOpen",
+    ],
 
     "vim.handleKeys":{
         "<C-c>": false,
         "<C-x>": false,
-        "<C-a>": false
+        "<C-a>": false,
+        "<C-v>": false,
+        "<C-m>": false,
     },
     "vim.insertModeKeyBindingsNonRecursive": [
         {
@@ -40,5 +50,12 @@
             "before": ["<C-l>"],
             "after": ["<Right>"]
         }
-    ]
+    ],
+    "[json]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "window.menuBarVisibility": "visible",
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
 }

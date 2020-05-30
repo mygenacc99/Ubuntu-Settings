@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "plugins=(
 	git
 	colored-man-pages
@@ -28,7 +29,7 @@ echo 'bindkey '^H' backward-kill-word' >> ~/.zshrc;
 sed 's/plugins=(git)//' ~/.zshrc >  ~/.zshrctemp
 mv ~/.zshrctemp ~/.zshrc
 
-if [[ $DESKTOP_SESSION = "plasma" ]]
+if [ $DESKTOP_SESSION = "plasma" ]
 then
     echo "
 export GTK_IM_MODULE=ibus

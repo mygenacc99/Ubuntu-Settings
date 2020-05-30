@@ -63,10 +63,32 @@ sudo systemctl stop wg-quick@wg0
 ###################### KDE ################################
 Set shortkey for flameshot
 
+System Settings:
+Global Theme: Materia Manjaro Dark
+Window Decorations: We10XOS
+Application Style: kvantum
+Iconce: Breeze dark
+Window Management: 
+    Task Switcher->Visualization: Grid
+    KWin Scripts: Force Blur
+    
+
 Clipboard: Ignore selection
 Turn on disk auto-mount feature
 Install Widget: Active window control
     /home/colab/.local/share/aurorae/themes/We10XOS/
-
+Latte Settings for Dock:
+    [Behavior]
+        Position: Top, right and autohide
+        Check drag and minimize/maximize active window
+        Delay: none
+        Uncheck active Kwin edge after hiding
+    [Appearance[
+    Absolute: 32
+    Background: turn on, 100% for each attribute.
+    [Effect]
+    Animation speed: x3
+    [Task]
+        Remove task applet.
 
 

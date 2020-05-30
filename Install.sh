@@ -1,33 +1,3 @@
-if [[ $DESKTOP_SESSION = "plasma" ]]
-then
-    echo "FOR PLASMA"
-    # Solve calculus on Krunner
-    sudo apt-get install -y gnuplot;
-    
-    # Screenshot for KDE
-    sudo apt-get purge -y kde-spectacle;
-    sudo apt-get install -y flameshot;
-    
-    sudo apt-get install -y latte-dock;
-    # For ibus
-    sudo apt-get install -y im-config language-selector-gnome ibus ibus-gtk ibus-gtk3 ibus-table;
-else
-    echo "FOR GNOME" 
-    # Change terminal skin
-    dconf load /org/gnome/terminal/ < .g_terminal;
-
-    # Install icon
-    mkdir -p ~/.icons
-    git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git ~/.icons
-
-
-    sudo apt-get install -y plank gnome-tweaks ctags gimp clang-format ccls;
-fi
-
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-
 cp ./.my-commands.sh ~/.my-commands.sh
 cp ./.clang-format ~/.clang-format
 cp ./wallpaper.jpg ~/Pictures/wallpaper.jpg
@@ -39,12 +9,56 @@ cp ../Fonts/MacFontsCollection/* ~/.fonts
 # Ctrl-S Ctrl-Q not stop nvim
 echo "stty -ixon" >> ~/.bashrc;
 
+sudo apt update
+sudo apt install -y software-properties-common apt-transport-https wget curl git net-tools;
+cd ~/Downloads
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install -y ./google-chrome-stable_current_amd64.deb
+
+
+
+if [[ $DESKTOP_SESSION == "plasma" ]]
+then
+    echo "FOR PLASMA"
+    # Themes manager for qt5
+    sudo apt install -y qt5-style-kvantum;   
+    
+    # Solve calculus on Krunner
+    sudo apt install -y gnuplot;
+    
+    # Screenshot for KDE
+    sudo apt purge -y kde-spectacle;
+    sudo apt install -y flameshot;
+    
+    sudo apt install -y latte-dock;
+    # For ibus
+    sudo apt install -y im-config language-selector-gnome ibus ibus-gtk ibus-gtk3 ibus-table;
+else
+    echo "FOR GNOME" 
+    # Change terminal skin
+    dconf load /org/gnome/terminal/ < .g_terminal;
+
+    # Install icon
+    mkdir -p ~/.icons
+    git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git ~/.icons
+
+
+    sudo apt install -y plank gnome-tweaks ctags gimp clang-format ccls;
+fi
+
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+
+
 sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
 sudo add-apt-repository ppa:neovim-ppa/unstable
 
-sudo apt-get update
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+
+sudo apt update
 # Install sofwares
-sudo apt-get install -y ibus-bamboo curl git kolourpaint simplescreenrecorder neovim neovim-qt vlc goldendict;
+sudo apt install -y code ibus-bamboo nodejs kolourpaint simplescreenrecorder neovim neovim-qt vlc goldendict;
 
 ibus restart
 
@@ -59,7 +73,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf;
 
 
 # Install zsh
-sudo apt-get install -y zsh;
+sudo apt install -y zsh;
 sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh);
 
 # Install ohmyzsh
