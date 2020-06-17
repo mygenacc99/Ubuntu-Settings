@@ -1,16 +1,17 @@
 cp ./.my-commands.sh ~/.my-commands.sh
+cp ./.tmux.conf ~/.tmux.conf 
 cp ./.clang-format ~/.clang-format
 cp ./wallpaper.jpg ~/Pictures/wallpaper.jpg
 
 # Install fonts
 mkdir ~/.fonts;
-cp ../Fonts/MacFontsCollection/* ~/.fonts 
+cp ../Fonts/FontsCollection/* ~/.fonts 
 
 # Ctrl-S Ctrl-Q not stop nvim
 echo "stty -ixon" >> ~/.bashrc;
 
 sudo apt update
-sudo apt install -y software-properties-common apt-transport-https wget curl git net-tools;
+sudo apt install -y wget curl git net-tools software-properties-common apt-transport-https;
 cd ~/Downloads
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -y ./google-chrome-stable_current_amd64.deb
@@ -58,7 +59,10 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt update
 # Install sofwares
-sudo apt install -y code ibus-bamboo nodejs kolourpaint simplescreenrecorder neovim neovim-qt vlc goldendict;
+sudo apt install -y nodejs neovim code ibus-bamboo kolourpaint simplescreenrecorder neovim-qt vlc goldendict;
+
+# Fix mysql can't store password
+sudo apt install -y  gnome-keyring;
 
 ibus restart
 
