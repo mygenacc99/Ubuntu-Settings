@@ -17,7 +17,6 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
 
-
 if [[ $DESKTOP_SESSION == "plasma" ]]
 then
     echo "FOR PLASMA"
@@ -51,15 +50,17 @@ fi
 #####################################################################################################
 #####################################################################################################
 
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 
 sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
 sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 sudo apt update
 # Install sofwares
-sudo apt install -y nodejs neovim code ibus-bamboo kolourpaint simplescreenrecorder neovim-qt vlc goldendict;
+sudo apt install -y nodejs neovim code ibus-bamboo kolourpaint simplescreenrecorder neovim-qt vlc goldendict tmux;
 
 # Fix mysql can't store password
 sudo apt install -y  gnome-keyring;
