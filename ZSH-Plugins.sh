@@ -1,6 +1,7 @@
 #!/bin/sh
 echo "plugins=(
 	git
+	heroku
 	colored-man-pages
 	zsh-syntax-highlighting
 	zsh-autosuggestions

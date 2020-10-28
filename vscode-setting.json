@@ -1,7 +1,6 @@
 {
-     "workbench.colorTheme": "Monokai Pro",
   "workbench.iconTheme": "material-icon-theme",
-  "editor.fontFamily": "'JetBrains Mono'",
+  "editor.fontFamily": "'JetBrains Mono', 'Cascadia Code'",
   "editor.fontLigatures": true,
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.fontSize": 16,
@@ -19,7 +18,8 @@
     "<C-x>": false,
     "<C-a>": false,
     "<C-v>": false,
-    "<C-m>": false
+    "<C-m>": false,
+    "<C-k>": false
   },
   "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -35,8 +35,13 @@
       "after": ["<Esc>", "l", "d", "0", "i", "<BS>"]
     }
   ],
-
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "window.menuBarVisibility": "visible",
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "window.zoomLevel": 1,
+  "workbench.startupEditor": "newUntitledFile",
+  "java.project.importHint": true,
+  "workbench.colorTheme": "Monokai Pro",
+  "editor.renameOnType": true,
+  "editor.formatOnSaveMode": "modifications"
 }
