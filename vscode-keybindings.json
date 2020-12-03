@@ -54,5 +54,48 @@
     "key": "ctrl+shift+v",
     "command": "-workbench.action.terminal.paste",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "-bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "-bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+m l",
+    "command": "bookmarks.list"
+  },
+  {
+    "key": "ctrl+shift+m shift+m",
+    "command": "bookmarks.toggleLabeled"
+  },
+  {
+    "key": "ctrl+shift+m",
+    "command": "-workbench.actions.view.problems"
+  },
+  {
+    "key": "ctrl+shift+m shift+l",
+    "command": "bookmarks.listFromAllFiles"
+  },
+  {
+    "key": "ctrl+shift+m m",
+    "command": "bookmarks.toggle"
+  },
+  {
+    "key": "ctrl+shift+m c",
+    "command": "bookmarks.clear"
+  },
+  {
+    "key": "ctrl+shift+m shift+c",
+    "command": "bookmarks.clearFromAllFiles"
   }
 ]

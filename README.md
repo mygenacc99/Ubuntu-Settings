@@ -1,5 +1,10 @@
---Things to do after installing  ubuntu.
-
+# Things to do after installing  ubuntu.
++ Shortkey
+    - Change shortkey emoji: 
+        Ctrl Shift e -> Super Shift e
+    - Move window: Alt+Click -> Super + Click
+- [KDE] : Ctrl - alt -k -> none
+             : Ctrl - alt - l -> Super + L.
 + Installs sublime if you want.(Find the download link and change xxxx build)
 + Installs Anki.
 	 Plugin button replay sound.
@@ -82,7 +87,7 @@ Latte Settings for Dock:
         Check drag and minimize/maximize active window
         Delay: none
         Uncheck active Kwin edge after hiding
-    [Appearance[
+    [Appearance]
     Absolute: 32
     Background: turn on, 100% for each attribute.
     [Effect]
